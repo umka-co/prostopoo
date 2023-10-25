@@ -1,0 +1,14 @@
+.button {
+  cursor: pointer;
+
+  background-color: #f3ea2e;
+  text-align: center;
+  font-family: "Rubik Mono One";
+  text-transform: uppercase;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: 400;
+  max-width: 22rem;
+
+  padding: 0.5rem 4rem;
+}
