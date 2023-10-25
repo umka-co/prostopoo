@@ -1,4 +1,5 @@
-.button {
+.button,
+.buttonMobile {
   cursor: pointer;
 
   background-color: #f3ea2e;
@@ -8,7 +9,15 @@
   border: none;
   border-radius: 1.5rem;
   font-weight: 400;
+}
+
+.button {
   max-width: 22rem;
 
   padding: 0.5rem 4rem;
+}
+
+.buttonMobile {
+  max-width: 16rem;
+  padding: 0.25rem 2.5rem;
 }

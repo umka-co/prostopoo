@@ -1,13 +1,24 @@
-.wrapper {
+.wrapper,
+.wrapperMobile {
   align-items: center;
-  border-radius: 1rem;
-  border: 3px solid #f3ea2e;
-  padding: 2rem;
   display: flex;
+  border-radius: 1rem;
   flex-direction: column;
-  gap: 1rem;
-  margin: 2rem;
 }
+
+.wrapper {
+  border: 3px solid #f3ea2e;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.wrapperMobile {
+  border: 2px solid #f3ea2e;
+  gap: 0.5rem;
+  max-width: 16rem;
+  padding: 1rem 2rem;
+}
+
 .header {
   font-family: "Rubik Mono One";
 }
@@ -16,4 +27,10 @@
   color: #f3ea2e;
   position: relative;
   left: 1rem;
+}
+
+.listMobile {
+  color: #f3ea2e;
+  position: relative;
+  left: 2rem;
 }

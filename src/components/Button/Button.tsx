@@ -7,6 +7,8 @@ import {
 } from "react";
 import styles from "./Button.module.css";
 import Typo from "../Typo";
+import { useMediaQuery } from "usehooks-ts";
+import { useOnMobile } from "@/config";
 
 interface Props
   extends PropsWithChildren<
@@ -22,9 +24,13 @@ const Button: FunctionComponent<Props> = ({
   href,
   ...restOfProps
 }) => {
+  const onMobile = useMediaQuery(useOnMobile);
   const buttonClass = useMemo(
-    () => [styles.button, className].filter(Boolean).join(" "),
-    [className]
+    () =>
+      [onMobile ? styles.buttonMobile : styles.button, className]
+        .filter(Boolean)
+        .join(" "),
+    [className, styles]
   );
   return href ? (
     <Link
