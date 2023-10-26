@@ -1,0 +1,22 @@
+.blue {
+  border: 2px solid #3fbcdf;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.green {
+  border: 2px solid #4eb050;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.red {
+  border: 2px solid #ff6d4c;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+.yellow {
+  border: 2px solid #f3ea2e;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
