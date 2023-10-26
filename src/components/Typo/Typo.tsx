@@ -12,6 +12,7 @@ import { useOnMobile } from "@/config";
 export interface TypoProps
   extends PropsWithChildren<HTMLAttributes<HTMLSpanElement>> {
   color?: "black" | "white" | "yellow";
+  maxWidth?: string;
   variant?: "header1" | "header2" | "header3" | "header4" | "text";
 }
 
@@ -19,6 +20,7 @@ const Typo: FunctionComponent<TypoProps> = ({
   className,
   children,
   color = "white",
+  maxWidth,
   variant = "text",
   ...otherProps
 }) => {
@@ -28,8 +30,13 @@ const Typo: FunctionComponent<TypoProps> = ({
     () => [className, styles[color], styles[variant]].filter(Boolean).join(" "),
     [className, color, variant, styles]
   );
+
   return (
-    <span className={classNameToRender} {...otherProps}>
+    <span
+      className={classNameToRender}
+      style={{ maxWidth: maxWidth }}
+      {...otherProps}
+    >
       {children}
     </span>
   );
